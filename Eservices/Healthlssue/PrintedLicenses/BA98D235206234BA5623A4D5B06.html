@@ -1108,14 +1108,14 @@
 
                                 <div class="col-md-6">
                                     <label class="form-group has-float-label ">
-                                        <input class="form-control" type="text" value=" أمانة المنطقة الشرقية " readonly="">
+                                        <input class="form-control" type="text" value=" أمانة منطقة الرياض " readonly="">
                                         <span> الامانة </span>
                                     </label>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-group has-float-label ">
-                                        <input class="form-control" type="text" value="بلدية الخبر 
+                                        <input class="form-control" type="text" value="بلدية الروضة
                                         " readonly="">
                                         <span>  البلدية</span>
                                     </label>
@@ -1200,7 +1200,7 @@
 
                                 <div class="col-md-6">
                                     <label class="form-group has-float-label ">
-                                        <input class="form-control" type="text" value="3909982740
+                                        <input class="form-control" type="text" value="431210235114
                                                                                        " readonly="">
 
                                         <span> رقم رخصة المنشأة</span>
@@ -1208,14 +1208,14 @@
                                 </div>
                                  <div class="col-md-6">
                                     <label class="form-group has-float-label ">
-                                        <input class="form-control" type="text" value=" سوبر ماركت ليل و نهار " readonly="">
+                                        <input class="form-control" type="text" value=" مطعم رذاذ" readonly="">
 
                                         <span> اسم المنشأة</span>
                                     </label>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-group has-float-label ">
-                                        <input class="form-control" type="text" value="7009127371" readonly="">
+                                        <input class="form-control" type="text" value="7021675967" readonly="">
 
                                         <span> رقم  المنشأة</span>
                                     </label>
@@ -1377,53 +1377,198 @@
     </div>
 </footer>
 
-<script type="text/javascript">
-    dontHide = false;
-    var mobileConfirmValidation = 'يرجى تأكيد رقم الجوال لإستكمال الطلب';
-    function readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0)
-                return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-    $.ajaxSetup({
-        beforeSend: function (xhr) {
-            $('.btn-step').attr("disabled", "disabled");
-            var X_XSRF_TOKEN = readCookie("XSRF-TOKEN");
-            xhr.setRequestHeader("X-XSRF-TOKEN", X_XSRF_TOKEN);
-        }
-    });
-    $(document).ajaxSend(function () {
-        $('#messageContainer').remove();
-        $('.preloader.checking').show();
-    });
-    $(document).ajaxStop(function () {
-        $('.btn-step').removeAttr("disabled");
-        $('.preloader.checking').hide();
-    });
-    $(document).on('change','.select2', function () {
-        $(this).parsley().validate();
-    });
-    $(document).ajaxError(function (e, jqxhr, settings, exception) {
-        e.stopPropagation();
-        if (jqxhr != null) {
-            if (jqxhr.status === 401) {
-                this.location.reload(true);
+<style>
+.pegalayout .PegaGadgetDIV{margin-top: 0 !important;}
+.mainHeader .menu a[href="https://apps.balady.gov.sa/dashboardclient/"] {position: relative;}
+.mainHeader .menu a[href="https://apps.balady.gov.sa/dashboardclient/"]::after {
+    content: "جديد";
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    width: auto;
+    height: auto;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background: #87bc50;
+    color: #fbfbfb;
+    font-size: 12px;
+    margin-right: 5px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important;
+    -webkit-animation-name: pulse !important;
+    animation-name: pulse !important;
+    animation-iteration-count: infinite !important;
+    animation: scale-in-center .25s cubic-bezier(0.25,0.46,0.45,0.94) .2s both;
+}
+</style>
+    
+    <script type="text/javascript">
+        dontHide = false;
+         var mobileConfirmValidation = 'يرجى تأكيد رقم الجوال لإستكمال الطلب';
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0)
+                    return c.substring(nameEQ.length, c.length);
             }
-            message = 'حدث خطأ غير متوقع';
-            try {
-                message = jQuery.parseJSON(jqxhr.responseText).statusName;
-            }
-            catch (ex) { }
-            showMessages(message);
+            return null;
         }
+        $.ajaxSetup({
+            beforeSend: function (xhr) {
+                $('.btn-step').attr("disabled", "disabled");
+                var X_XSRF_TOKEN = readCookie("XSRF-TOKEN");
+                xhr.setRequestHeader("X-XSRF-TOKEN", X_XSRF_TOKEN);
+            }
+        });
+        $(document).ajaxSend(function () {
+            $('#messageContainer').remove();
+            $('.preloader.checking').show();
+        });
+        $(document).ajaxStop(function () {
+            $('.btn-step').removeAttr("disabled");
+            $('.preloader.checking').hide();
+        });
+        $(document).on('change','.select2', function () {
+            $(this).parsley().validate();
+        });
+        $(document).ajaxError(function (e, jqxhr, settings, exception) {
+            e.stopPropagation();
+            if (jqxhr != null) {
+                if (jqxhr.status === 401) {
+                    this.location.reload(true);
+                }
+                message = 'حدث خطأ غير متوقع';
+                try {
+                    message = jQuery.parseJSON(jqxhr.responseText).statusName;
+                }
+                catch (ex) { }
+                showMessages(message);
+            }
+        });
+    </script>
+
+
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+
+const muneerClientId = '7e6f57f5-43a9-4c2b-97bc-bf2ff14b14c7';
+$(document).ready(function () {
+    loadMunnerCSS('https://muneer.cx/static/v1/css/muneer.min.css');
+    loadMunnerScript(`https://muneer.cx/v1/js/muneer.min.js?cid=${muneerClientId}`, function () {
+        initalizeMuneer();
     });
-</script>
+});
+function loadMunnerCSS(url) {
+    let link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = url;
+    document.head.append(link);
+}
+function loadMunnerScript(url, callback) {
+    let script = document.createElement('script');
+    script.src = url;
+    script.type = 'text/javascript';
+    script.onload = callback;
+    document.body.append(script);
+}
+function initalizeMuneer() {
+    new Muneer({
+        "path": "https://muneer.cx/static/v1/",
+        "analyticsEndpoint": "https://stats.muneer.cx/api/v1/",
+        "clientID": muneerClientId,
+        "supportedLanguages": ["ar", "en"],
+        "template": "aside",
+        "sidebarAlign": "right",
+        "popupOverlay": true,
+        "popupAnimation": "fade",
+        "popupScroll": true,
+        "closeAnywhere": true,
+        "closeButton": true,
+        "popupDraggable": true,
+        "popupShadow": true,
+        "popupTools": true,
+        "showOpenButton": true,
+        "buttonTabulationIndex": 0,
+        "buttonPosition": "bottom-right",
+        "buttonIconPosition": "before",
+        "buttonEntranceAnimation": "fade",
+        "buttonHoverAnimation": "none",
+        "voiceNavigationAuto": false,
+        "voiceNavigationAutoHidePopup": false,
+        "analytics": false,
+        "accessibilityProfiles": true,
+        "profileEpilepsy": true,
+        "profileVisuallyImpaired": true,
+        "profileCognitiveDisability": true,
+        "profileMotorImpaired": true,
+        "profileColorblind": true,
+        "profileDyslexiaFriendly": true,
+        "profileAdhdFriendly": true,
+        "profileBlindUsers": true,
+        "onlineDictionary": true,
+        "voiceNavigation": true,
+        "readableExperience": true,
+        "contentScaling": true,
+        "textMagnifier": true,
+        "readableFont": true,
+        "dyslexiaFont": true,
+        "highlightTitles": true,
+        "highlightLinks": true,
+        "fontSizing": true,
+        "lineHeight": true,
+        "letterSpacing": true,
+        "alignCenter": true,
+        "alignLeft": true,
+        "alignRight": true,
+        "visuallyPleasingExperience": true,
+        "darkContrast": true,
+        "lightContrast": true,
+        "monochrome": true,
+        "highSaturation": true,
+        "highContrast": true,
+        "lowSaturation": true,
+        "colorizing": true,
+        "textColors": true,
+        "titleColors": true,
+        "backgroundColors": true,
+        "easyOrientation": true,
+        "muteSounds": true,
+        "hideImages": true,
+        "virtualKeyboard": true,
+        "readingGuide": true,
+        "usefulLinks": true,
+        "stopAnimations": true,
+        "readingMask": true,
+        "highlightHover": true,
+        "highlightFocus": true,
+        "bigBlackCursor": true,
+        "bigWhiteCursor": true,
+        "textToSpeech": true,
+        "keyboardNavigation": true,
+        "accessibilityStatement": false,
+        "whitelabel": true,
+        "themeSwitcher": true,
+        "themeDefault": "system"
+    });
+    var style = document.createElement('style');
+    style.innerHTML = `html { --muneer-color: #10615f !important; --muneer-color-accent: #1faf6f6b !important; --muneer-color-transparent: #eaf6ef !important; --muneer-text: #414042 !important; --muneer-btn-bg: #84BC47 !important; --muneer-btn-color-hover: #84BC47 !important; } body.muneer-readable-font [class^=icon-], [class*=" icon-"] font-family: icons, sans-serif !important; }`;
+    document.head.appendChild(style);
+}
+//]]></script>
+
 
 
 
